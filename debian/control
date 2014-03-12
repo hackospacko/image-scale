@@ -1,0 +1,37 @@
+Source: libimage-scale-perl
+Section: perl
+Priority: optional
+Maintainer: Christopher Huhn <christo@arthur.knollhuhn.de>
+Build-Depends: debhelper (>= 9.20120312),
+ libtest-nowarnings-perl,
+ perl
+Standards-Version: 3.9.4
+Homepage: https://metacpan.org/release/Image-Scale
+
+Package: libimage-scale-perl
+Architecture: any
+Depends: ${misc:Depends}, ${perl:Depends}, ${shlibs:Depends},
+ libtest-nowarnings-perl
+Description: Fast, high-quality fixed-point image resizing
+ Image::Scale implements several resizing algorithms with a focus on low
+ overhead, speed and minimal features. Algorithms available are:
+ .
+ GD's copyResampled (floating-point)
+ .
+ GD's copyResampled fixed-point (useful on embedded devices/NAS devices)
+ .
+ GraphicsMagick's assortment of resize filters (floating-point)
+ .
+ GraphicsMagick's Triangle filter in fixed-point
+ .
+ Supported image formats include JPEG, GIF, PNG, and BMP for input, and JPEG
+ and PNG for output.
+ .
+ This module came about because we needed to improve the very slow performance
+ of floating-point resizing algorithms on platforms without a floating-point
+ unit, such as ARM devices like the SheevaPlug, and the Sparc-based ReadyNAS
+ Duo. Previously it would take many seconds to resize using GD on the ReadyNAS
+ but the conversion to fixed-point with a little assembly code brings this
+ down to the range of well under 1 second.
+ .
+ This description was automagically extracted from the module by dh-make-perl.

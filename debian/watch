@@ -1,0 +1,2 @@
+version=3
+https://metacpan.org/release/Image-Scale   .*/Image-Scale-v?(\d[\d.-]*)\.(?:tar(?:\.gz|\.bz2)?|tgz|zip)$
