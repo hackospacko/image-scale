@@ -1,5 +1,4 @@
 Changes
-hints/darwin.pl
 include/buffer.h
 include/common.h
 include/fixed.h
@@ -43,6 +42,7 @@ t/images/bmp/8bit.bmp
 t/images/bmp/8bit_os2.bmp
 t/images/bmp/8bit_rle.bmp
 t/images/bmp/v2.4-apic-bmp-318-24632.mp3
+t/images/gif/bug17573-thin.gif
 t/images/gif/corrupt.gif
 t/images/gif/interlaced_256.gif
 t/images/gif/transparent.gif
@@ -91,6 +91,7 @@ t/ref/bmp/4bit_resize_gd_fixed_point_w127.png
 t/ref/bmp/8bit_resize_gd_fixed_point_w127.png
 t/ref/bmp/apic_gd_fixed_point_w127.png
 t/ref/gif/apic_gd_fixed_point_w100.png
+t/ref/gif/bug17573-thin_gd_fixed_point_w40.png
 t/ref/gif/interlaced_256_resize_gd_fixed_point_w100.png
 t/ref/gif/transparent_multiple_resize_gd_fixed_point.png
 t/ref/gif/transparent_resize_gd_fixed_point_w100.png
@@ -180,8 +181,10 @@ t/ref/png/rgba16_resize_gd_fixed_point_w100.png
 t/ref/png/rgba_interlaced_resize_gd_fixed_point_w100.png
 t/ref/png/rgba_multiple_resize_gd_fixed_point.png
 t/ref/png/rgba_resize_gd_fixed_point_w100.png
+t/stringify.t
 TODO
 tools/bench.pl
 tools/scan.pl
 typemap
-META.yml                                 Module meta-data (added by MakeMaker)
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)

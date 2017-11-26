@@ -1,5 +1,37 @@
 Revision history for Image::Scale
 
+0.13    2016-11-24
+        - save_jpeg() and save_png() will now properly stringify when passed something such as a
+          Path::Tiny object.
+        - Added back support for giflib 4.1.x.
+
+0.12    2016-05-08
+        - Skip JPEG binary comparison tests by default, as they are broken with libjpeg-turbo.
+        - Correctly find libjpeg-turbo on Linux systems where some headers are installed
+          in /usr/include/x86_64-linux-gnu
+        - Removed hints/darwin.pl, don't try to be smarter than Perl about how to build things.
+
+0.11    2015-10-07
+        - Added $img->resized_height() and $img->resized_width() accessors that
+          return the post-resize dimensions of the image. This can be useful if you
+          only specified one dimension and need to know the other dimension that
+          was calculated by the module. (RT #80269)
+        - Changed ARM fixed_mul assembly code to not round the result, in order to
+          match the output from x86 and C versions and pass the tests. (RT #93417)
+        - Fixed GIF compilation when using giflib >= 5.0. (RT #106749)
+        - Compilation fixes for newer OSX versions.
+        - Point at new GitHub repo.
+
+0.10    2015-08-23
+        - GIF support now requires giflib >= 4.2.0, due to API changes.
+          libungif is no longer supported. (RT #101679)
+        - Fixed call to png_memcpy no longer working (RT #89927)
+
+0.09    (unreleased)
+        - Bug 17573, fixed several places where we could divide by 0.
+        - Fixed JPEG version detection for libjpeg-turbo.
+        - Fixed GIF library detection when using only --with-gif-includes switch.
+
 0.08    2011-08-24
         - Forgot to add some new test files to the manifest.
         - Updated the Makefile and Win32 instructions to use libjpeg-turbo-1.1.1.
